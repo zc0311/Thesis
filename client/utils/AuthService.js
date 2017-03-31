@@ -1,7 +1,11 @@
 import Auth0Lock from 'auth0-lock'
 import config from '../../environment';
 
+<<<<<<< HEAD
 class AuthService {
+=======
+class AuthService extends React.Component{
+>>>>>>> Auth rebase
   constructor(clientId, domain) {
     // Configure Auth0
     this.lock = new Auth0Lock(config.AUTH_ID, config.AUTH_CLIENT)
@@ -33,7 +37,7 @@ class AuthService {
     this.setItem('token', "JSON.stringify(authResult.idToken)")
     localStorage.setItem('profile', JSON.stringify(authResult.profile))
     // navigate to the home route
-    window.location.href = '/#/profile/';
+    window.location.href = '/profile';
   }
 
   login() {
