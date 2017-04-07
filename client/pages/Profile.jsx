@@ -29,12 +29,11 @@ export default class Profile extends React.Component {
     } else {
       return (
         <div id='profileContent'>
+          <StatsCard stats={this.props.userdata}/>   
           <PacksCard /> 
-          <StatsCard />   
           <div id="clear"></div>
-          <BadgesCard />
-
           <GoalsCard />
+          <BadgesCard />
         </div>
         );
     }
